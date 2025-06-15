@@ -64,16 +64,37 @@
 </head>
 <body class="bg-slate-900 min-h-screen flex flex-col text-white">
   <nav class="w-full bg-white/10 backdrop-blur-md shadow sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16 items-center">
-        <div class="flex-shrink-0 text-2xl font-semibold text-blue-400 select-none">Syntia's Portfolio</div>
-        <div class="hidden md:flex space-x-8">
-          <a class="nav-link text-white hover:text-blue-400 font-medium" href="intro.html">Introduction</a>
-          <a class="nav-link text-white hover:text-blue-400 font-medium" href="about.html">About</a>
-          <a class="nav-link text-white hover:text-blue-400 font-medium" href="skills.html">Skills</a>
-          <a class="nav-link text-white hover:text-blue-400 font-medium" href="certificate.html">Certificate</a>
-          <a class="nav-link text-white hover:text-blue-400 font-medium" href="contact.html">Contact</a>
-        </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      <!-- Logo -->
+      <div class="flex-shrink-0 text-2xl font-semibold text-blue-400 select-none">
+        Syntia's Portfolio
+      </div>
+
+      <!-- Hamburger Button (Mobile) -->
+      <div class="md:hidden">
+        <button id="menuToggle" class="text-white focus:outline-none text-2xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Menu Desktop -->
+      <div class="hidden md:flex space-x-8">
+        <a class="nav-link text-white hover:text-blue-400 font-medium" href="index.html">Introduction</a>
+        <a class="nav-link text-white hover:text-blue-400 font-medium" href="about.html">About</a>
+        <a class="nav-link text-white hover:text-blue-400 font-medium" href="skills.html">Skills</a>
+        <a class="nav-link text-white hover:text-blue-400 font-medium" href="certificate.html">Certificate</a>
+        <a class="nav-link text-white hover:text-blue-400 font-medium" href="contact.html">Contact</a>
+      </div>
+    </div>
+
+      <!-- Menu Mobile (Dropdown) -->
+      <div id="mobileMenu" class="md:hidden flex-col space-y-4 mt-4 pb-4">
+        <a class="nav-link block text-white hover:text-blue-400 font-medium" href="index.html">Introduction</a>
+        <a class="nav-link block text-white hover:text-blue-400 font-medium" href="about.html">About</a>
+        <a class="nav-link block text-white hover:text-blue-400 font-medium" href="skills.html">Skills</a>
+        <a class="nav-link block text-white hover:text-blue-400 font-medium" href="certificate.html">Certificate</a>
+        <a class="nav-link block text-white hover:text-blue-400 font-medium" href="contact.html">Contact</a>
       </div>
     </div>
   </nav>

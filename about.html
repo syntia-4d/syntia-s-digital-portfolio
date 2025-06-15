@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>About - Digital Portfolio Syntia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #2563eb;
+      transition: width 0.3s ease;
+      border-radius: 2px;
+    }
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+    .horizontal-scroll {
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: #2563eb #e5e7eb;
+    }
+    .horizontal-scroll::-webkit-scrollbar {
+      height: 8px;
+    }
+    .horizontal-scroll::-webkit-scrollbar-track {
+      background: #e5e7eb;
+      border-radius: 4px;
+    }
+    .horizontal-scroll::-webkit-scrollbar-thumb {
+      background-color: #2563eb;
+      border-radius: 4px;
+    }
+    .nav-link-glow {
+      color: #3b82f6;
+      text-shadow: 0 0 6px #60a5fa, 0 0 12px #3b82f6, 0 0 18px #2563eb;
+    }
+    #mobileMenu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-in-out;
+    }
+    #mobileMenu.open {
+      max-height: 500px;
+    }
+  </style>
+</head>
+<body class="bg-slate-900 min-h-screen flex flex-col text-white">
+  <nav class="w-full bg-white/10 backdrop-blur-md shadow sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      <!-- Logo -->
+      <div class="flex-shrink-0 text-2xl font-semibold text-blue-400 select-none">
+        Syntia's Portfolio
+      </div>
+
+      <!-- Hamburger Button (Mobile) -->
+      <div class="md:hidden">
+        <button id="menuToggle" class="text-white focus:outline-none text-2xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Menu Desktop -->
+      <div class="hidden md:flex space-x-8">
+        <a class="nav-link text-white hover:text-blue-400 font-medium" href="intro.html">Introduction</a>
+        <a class="nav-link text-white hover:text-blue-400 font-medium" href="about.html">About</a>
+        <a class="nav-link text-white hover:text-blue-400 font-medium" href="skills.html">Skills</a>
+        <a class="nav-link text-white hover:text-blue-400 font-medium" href="certificate.html">Certificate</a>
+        <a class="nav-link text-white hover:text-blue-400 font-medium" href="contact.html">Contact</a>
+      </div>
+    </div>
+
+      <!-- Menu Mobile (Dropdown) -->
+      <div id="mobileMenu" class="md:hidden flex-col space-y-4 mt-4 pb-4">
+        <a class="nav-link block text-white hover:text-blue-400 font-medium" href="intro.html">Introduction</a>
+        <a class="nav-link block text-white hover:text-blue-400 font-medium" href="about.html">About</a>
+        <a class="nav-link block text-white hover:text-blue-400 font-medium" href="skills.html">Skills</a>
+        <a class="nav-link block text-white hover:text-blue-400 font-medium" href="certificate.html">Certificate</a>
+        <a class="nav-link block text-white hover:text-blue-400 font-medium" href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+<!-- Main Content -->
+<main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+  <section class="tab-content" id="about">
+    <div class="max-w-6xl mx-auto fade-in">
+      <h2 class="text-4xl font-bold text-blue-700 text-center mb-6">About Me</h2>
+      <div class="flex flex-col md:flex-row items-start gap-10">
+        <div class="flex-shrink-0 mx-auto md:mx-0">
+          <img src="foto.jpeg"
+               alt="Foto Syntia"
+               class="rounded-full w-60 h-60 object-cover shadow-lg border-4 border-blue-500 transition-all duration-300 hover:scale-105 hover:shadow-blue-500/50" />
+        </div>
+
+        <div>
+          <div class="horizontal-scroll flex space-x-6 px-2 pt-10 pb-4 relative">
+
+            <!-- Card 1 -->
+            <div class="flex-shrink-0 w-[90%] md:w-[45%] bg-white/10 text-gray-300 rounded-xl shadow-lg p-6 transition-transform hover:scale-105 hover:shadow-blue-400 relative">
+              <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white p-3 rounded-full shadow-md">
+                <i class="fas fa-user text-xl"></i>
+              </div>
+              <p class="mt-6">Nama saya Syntia Dwi Nikmatul Jannah. Saya lahir pada tanggal 4 September 2007, di Surabaya. Saya tinggal di Ds. Ngaringan, Kec. Gandusari, Kab. Blitar. Saat ini, saya masih seorang siswi di SMKN 1 Nglegok dengan jurusan Teknik Komputer dan Jaringan (TKJ).</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="flex-shrink-0 w-[90%] md:w-[45%] bg-white/10 text-gray-300 rounded-xl shadow-lg p-6 transition-transform hover:scale-105 hover:shadow-blue-400 relative">
+              <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white p-3 rounded-full shadow-md">
+                <i class="fas fa-laptop text-xl"></i>
+              </div>
+              <p class="mt-6">Selama masa belajar, saya telah mempelajari berbagai hal seputar jaringan komputer, sistem operasi, pengembangan web, serta administrasi server. Saya memiliki ketertarikan yang kuat pada dunia teknologi, khususnya di bidang konfigurasi jaringan, Linux, dan pembuatan website.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="flex-shrink-0 w-[90%] md:w-[45%] bg-white/10 text-gray-300 rounded-xl shadow-lg p-6 transition-transform hover:scale-105 hover:shadow-blue-400 relative">
+              <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white p-3 rounded-full shadow-md">
+                <i class="fas fa-lightbulb text-xl"></i>
+              </div>
+              <p class="mt-6">Saya mampu bekerja secara tim maupun individu dalam menyelesaikan tugas dan proyek. Saya memiliki komunikasi yang baik, mampu berpikir kritis, serta disiplin dalam mengelola waktu dan bertanggung jawab.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-slate-800 border-t border-slate-700 mt-10 text-center text-slate-400 py-6">
+  <p class="text-sm select-none">© 2025 Syntia Dwi. All rights reserved.</p>
+</footer>
+
+<!-- JavaScript -->
+<script>
+  // === Highlight Link Aktif di Navbar ===
+  const links = document.querySelectorAll("nav a.nav-link");
+  const currentPage = location.pathname.split("/").pop();
+
+  links.forEach(link => {
+    const href = link.getAttribute("href");
+
+    if (href === currentPage) {
+      link.classList.add("active", "nav-link-glow");
+      link.classList.remove("text-white", "text-gray-700");
+    } else {
+      link.classList.remove("active", "nav-link-glow");
+      link.classList.add("text-white");
+    }
+
+    // Efek glow saat hover
+    link.addEventListener("mouseenter", () => {
+      link.classList.add("nav-link-glow");
+    });
+    link.addEventListener("mouseleave", () => {
+      if (!link.classList.contains("active")) {
+        link.classList.remove("nav-link-glow");
+      }
+    });
+  });
+
+    // === Toggle Mobile Menu ===
+    const toggleBtn = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+    let menuOpen = false;
+
+    toggleBtn.addEventListener("click", () => {
+    menuOpen = !menuOpen;
+    mobileMenu.classList.toggle("open");
+
+    // Ganti ikon
+    toggleBtn.innerHTML = menuOpen
+      ? '<i class="fas fa-times"></i>'
+      : '<i class="fas fa-bars"></i>';
+  });
+</script>
+
+</body>
+</html>

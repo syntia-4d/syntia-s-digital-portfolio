@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>Skills - Digital Portfolio Syntia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }  
+    .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #2563eb;
+      transition: width 0.3s ease;
+      border-radius: 2px;
+    }
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+    .nav-link-glow {
+      color: #3b82f6; /* Warna biru */
+      text-shadow: 0 0 6px #60a5fa, 0 0 12px #3b82f6, 0 0 18px #2563eb;
+    }
+    #mobileMenu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-in-out;
+    }
+    #mobileMenu.open {
+      max-height: 500px; /* Cukup besar untuk menampung semua item */
+    }
+  </style>
+</head>
+<body class="bg-slate-900 min-h-screen flex flex-col text-white">
+  <nav class="w-full bg-white/10 backdrop-blur-md shadow sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      <!-- Logo -->
+      <div class="flex-shrink-0 text-2xl font-semibold text-blue-400 select-none">
+        Syntia's Portfolio
+      </div>
+
+      <!-- Hamburger Button (Mobile) -->
+      <div class="md:hidden">
+        <button id="menuToggle" class="text-white focus:outline-none text-2xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Menu Desktop -->
+      <div class="hidden md:flex space-x-8">
+        <a class="nav-link text-white hover:text-blue-400 font-medium" href="intro.html">Introduction</a>
+        <a class="nav-link text-white hover:text-blue-400 font-medium" href="about.html">About</a>
+        <a class="nav-link text-white hover:text-blue-400 font-medium" href="skills.html">Skills</a>
+        <a class="nav-link text-white hover:text-blue-400 font-medium" href="certificate.html">Certificate</a>
+        <a class="nav-link text-white hover:text-blue-400 font-medium" href="contact.html">Contact</a>
+      </div>
+    </div>
+
+      <!-- Menu Mobile (Dropdown) -->
+      <div id="mobileMenu" class="md:hidden flex-col space-y-4 mt-4 pb-4">
+        <a class="nav-link block text-white hover:text-blue-400 font-medium" href="intro.html">Introduction</a>
+        <a class="nav-link block text-white hover:text-blue-400 font-medium" href="about.html">About</a>
+        <a class="nav-link block text-white hover:text-blue-400 font-medium" href="skills.html">Skills</a>
+        <a class="nav-link block text-white hover:text-blue-400 font-medium" href="certificate.html">Certificate</a>
+        <a class="nav-link block text-white hover:text-blue-400 font-medium" href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+<main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+<section class="tab-content" id="skills">
+  <div class="max-w-6xl mx-auto space-y-10 fade-in">
+    <h2 class="text-4xl font-bold text-blue-700 text-center">My Skills</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+      <!-- FOTO BULAT -->
+      <div class="flex justify-center">
+        <img src="foto.jpeg"
+             alt="Syntia Profile"
+             class="rounded-full w-60 h-60 object-cover shadow-lg border-4 border-blue-500 transition-all duration-300 hover:scale-105 hover:shadow-blue-500/50" />
+      </div>
+
+      <!-- DAFTAR SKILL -->
+      <div class="flex flex-col gap-6 max-w-3xl mx-auto mt-10">
+  <!-- Web Programming -->
+  <div class="bg-white/10 p-6 rounded-xl shadow-lg transition-transform hover:scale-105 hover:shadow-blue-400">
+    <h3 class="text-xl font-semibold text-blue-400 flex items-center gap-2 mb-3">
+      <i class="fas fa-code"></i> Pemrograman Web
+    </h3>
+    <ul class="list-disc list-inside text-slate-300 space-y-1">
+      <li>Memahami dasar-dasar HTML, CSS, dan JavaScript untuk pengembangan web.</li>
+      <li>Mampu membuat desain antarmuka (UI) sederhana menggunakan Figma.</li>
+    </ul>
+  </div>
+
+  <!-- System Administration -->
+  <div class="bg-white/10 p-6 rounded-xl shadow-lg transition-transform hover:scale-105 hover:shadow-blue-400">
+    <h3 class="text-xl font-semibold text-blue-400 flex items-center gap-2 mb-3">
+      <i class="fas fa-server"></i> System Administration
+    </h3>
+    <ul class="list-disc list-inside text-slate-300 space-y-1">
+      <li>Mengoperasikan perintah dasar Linux seperti apt, ls, cd, dan nano.</li>
+      <li>Mampu melakukan konfigurasi dasar SSH, DNS (BIND9), dan server Apache.</li>
+      <li>Mampu melakukan instalasi dan pengelolaan CMS seperti WordPress dan Moodle.</li>
+      <li>Mampu menggunakan Git untuk kontrol versi (clone, push, pull).</li>
+    </ul>
+  </div>
+
+  <!-- Networking -->
+  <div class="bg-white/10 p-6 rounded-xl shadow-lg transition-transform hover:scale-105 hover:shadow-blue-400">
+    <h3 class="text-xl font-semibold text-blue-400 flex items-center gap-2 mb-3">
+      <i class="fas fa-network-wired"></i> Jaringan
+    </h3>
+    <ul class="list-disc list-inside text-slate-300 space-y-1">
+      <li>Mampu melakukan crimping kabel LAN dengan alat dan teknik yang sesuai standar.</li>
+      <li>Mampu melakukan penyambungan (splicing) kabel Fiber Optic (FO).</li>
+    </ul>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-slate-800 border-t border-slate-700 mt-10 text-center text-slate-400 py-6">
+  <p class="text-sm select-none">© 2025 Syntia Dwi. All rights reserved.</p>
+</footer>
+
+<!-- JavaScript -->  
+<script>
+  // === Highlight Link Aktif di Navbar ===
+  const links = document.querySelectorAll("nav a.nav-link");
+  const currentPage = location.pathname.split("/").pop();
+
+  links.forEach(link => {
+    const href = link.getAttribute("href");
+
+    if (href === currentPage) {
+      link.classList.add("active", "nav-link-glow");
+      link.classList.remove("text-white", "text-gray-700");
+    } else {
+      link.classList.remove("active", "nav-link-glow");
+      link.classList.add("text-white");
+    }
+
+    // Efek glow saat hover
+    link.addEventListener("mouseenter", () => {
+      link.classList.add("nav-link-glow");
+    });
+    link.addEventListener("mouseleave", () => {
+      if (!link.classList.contains("active")) {
+        link.classList.remove("nav-link-glow");
+      }
+    });
+  });
+
+    // === Toggle Mobile Menu ===
+    const toggleBtn = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+    let menuOpen = false;
+
+    toggleBtn.addEventListener("click", () => {
+    menuOpen = !menuOpen;
+    mobileMenu.classList.toggle("open");
+
+    // Ganti ikon
+    toggleBtn.innerHTML = menuOpen
+      ? '<i class="fas fa-times"></i>'
+      : '<i class="fas fa-bars"></i>';
+  });
+</script>
+
+</body>
+</html>
